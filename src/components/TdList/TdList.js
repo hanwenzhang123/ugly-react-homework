@@ -13,7 +13,6 @@ class TdList extends Component {
     const { list } = this.state;
     return (
       <div className="App">
-        <h1> TO-DO LIST </h1>
         <InputField />
         <ItemList todo={list} />
       </div>

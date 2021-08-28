@@ -10,7 +10,7 @@ class App extends Component {
   }
   render() {
     return (
-      <React.Fragment className="App">
+      <React.Fragment>
         <Counter />
         <TdList />
       </React.Fragment>
