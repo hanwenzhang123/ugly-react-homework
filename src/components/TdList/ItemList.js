@@ -4,8 +4,8 @@ import Item from "./Item";
 function ItemList(props) {
   return (
     <div className="App">
-      {props.todo.map((text, index) => (
-        <Item key={index} text={text} />
+      {props.onDisplay.map((item, index) => (
+        <Item id={index} key={index} item={item} onDelete={props.onDelete} />
       ))}
     </div>
   );

@@ -1,38 +1,43 @@
-import React from "react";
+import React, { Component } from "react";
+class InputField extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      inputText: "",
+    };
+  }
 
-const InputField = (props) => {
-  return (
-    <div>
-      <h1> TO-DO LIST </h1>
-      <input type="text" />
-      <button>ADD</button>
-    </div>
-  );
-};
+  handleClick = () => {
+    this.props.onAdd(this.state.inputText);
+    this.setState({
+      inputText: "",
+    });
+  };
+
+  handleChange = (event) => {
+    this.setState({ inputText: event.target.value });
+  };
+
+  render() {
+    return (
+      <div>
+        <h1> TO-DO LIST </h1>
+        <input
+          onChange={this.handleChange}
+          type="text"
+          placeholder="Enter Task"
+          value={this.state.inputText}
+        />
+        <button
+          onClick={() => {
+            this.handleClick();
+          }}
+        >
+          ADD
+        </button>
+      </div>
+    );
+  }
+}
 
 export default InputField;
-
-// import React, { useState } from "react";
-
-// function InputField(props) {
-//   const [inputText, setInputText] = useState("");
-
-//   function handleChange(event) {
-//     const newValue = event.target.value;
-//     setInputText(newValue);
-//   }
-
-//   function handleClick() {
-//     props.onAdd(inputText);
-//     setInputText("");
-//   }
-
-//   return (
-//     <div>
-//       <input onChange={handleChange} type="text" value={inputText} />
-//       <button onClick={handleClick}>ADD</button>
-//     </div>
-//   );
-// }
-
-// export default InputField;
