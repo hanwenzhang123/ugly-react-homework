@@ -22,13 +22,24 @@ class TdList extends Component {
     this.setState({ list: updatedList });
   };
 
+  sortList = (value) => {
+    const list = [...this.state.list];
+    if (value === "asc") {
+      const ascList = list.sort((a, b) => a.localeCompare(b));
+      this.setState({ list: ascList });
+    } else if (value === "desc") {
+      const descList = list.sort((a, b) => b.localeCompare(a));
+      this.setState({ list: descList });
+    }
+  };
+
   render() {
     const { list } = this.state;
-    const { addItem, deleteItem } = this;
+    const { addItem, deleteItem, sortList } = this;
 
     return (
       <div className="App">
-        <InputField onAdd={addItem} />
+        <InputField onAdd={addItem} onSelect={sortList} />
         <ItemList onDisplay={list} onDelete={deleteItem} />
       </div>
     );

@@ -8,7 +8,9 @@ class InputField extends Component {
   }
 
   handleClick = () => {
-    this.props.onAdd(this.state.inputText);
+    if (this.state.inputText.trim().length > 0) {
+      this.props.onAdd(this.state.inputText);
+    }
     this.setState({
       inputText: "",
     });
@@ -18,23 +20,28 @@ class InputField extends Component {
     this.setState({ inputText: event.target.value });
   };
 
+  handleDropdown = (event) => {
+    this.props.onSelect(event.target.value);
+  };
+
   render() {
+    const { inputText } = this.state;
+    const { handleChange, handleClick, handleDropdown } = this;
     return (
       <div>
         <h1> TO-DO LIST </h1>
         <input
-          onChange={this.handleChange}
+          onChange={handleChange}
           type="text"
           placeholder="Enter Task"
-          value={this.state.inputText}
+          value={inputText}
         />
-        <button
-          onClick={() => {
-            this.handleClick();
-          }}
-        >
-          ADD
-        </button>
+        <button onClick={handleClick}>ADD</button>
+        <select onChange={handleDropdown}>
+          <option>***sort***</option>
+          <option value="asc">A-Z</option>
+          <option value="desc">Z-A</option>
+        </select>
       </div>
     );
   }
