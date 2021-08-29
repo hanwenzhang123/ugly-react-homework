@@ -1,6 +1,8 @@
 import React, { Component } from "react";
 import InputField from "./InputField";
 import ItemList from "./ItemList";
+import Card from "../UI/Card";
+import ContentContainer from "../HOC/ContentContainer";
 
 class TdList extends Component {
   constructor(props) {
@@ -38,12 +40,12 @@ class TdList extends Component {
     const { addItem, deleteItem, sortList } = this;
 
     return (
-      <div className="App">
+      <Card>
         <InputField onAdd={addItem} onSelect={sortList} />
         <ItemList onDisplay={list} onDelete={deleteItem} />
-      </div>
+      </Card>
     );
   }
 }
 
-export default TdList;
+export default ContentContainer(TdList);

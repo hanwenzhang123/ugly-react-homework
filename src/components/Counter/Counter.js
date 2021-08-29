@@ -1,6 +1,8 @@
 import React, { Component } from "react";
 import Count from "./Count";
 import ButtonRow from "./ButtonRow";
+import Card from "../UI/Card";
+import ContentContainer from "../HOC/ContentContainer";
 
 class Counter extends Component {
   constructor(props) {
@@ -65,7 +67,7 @@ class Counter extends Component {
       this;
 
     return (
-      <div className="App">
+      <Card>
         <Count num={number} />
         <ButtonRow clickHandler={increment} value="Increment +1" />
         <ButtonRow clickHandler={decrement} value="Decrement -1" />
@@ -76,9 +78,9 @@ class Counter extends Component {
           clickHandler={timerHandler}
           value={this.state.isRunning ? "TIMER STOP" : "TIMER START"}
         />
-      </div>
+      </Card>
     );
   }
 }
 
-export default Counter;
+export default ContentContainer(Counter);
