@@ -48,4 +48,5 @@ class TdList extends Component {
   }
 }
 
-export default ContentContainer(TdList);
+const HOCTdList = ContentContainer(TdList);
+export default HOCTdList;

@@ -83,4 +83,5 @@ class Counter extends Component {
   }
 }
 
-export default ContentContainer(Counter);
+const HOCCounter = ContentContainer(Counter);
+export default HOCCounter;
