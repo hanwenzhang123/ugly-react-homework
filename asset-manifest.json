@@ -1,0 +1,20 @@
+{
+  "files": {
+    "main.css": "/ugly-react-homework/static/css/main.1733fb01.chunk.css",
+    "main.js": "/ugly-react-homework/static/js/main.be7270a8.chunk.js",
+    "main.js.map": "/ugly-react-homework/static/js/main.be7270a8.chunk.js.map",
+    "runtime-main.js": "/ugly-react-homework/static/js/runtime-main.eb23c19a.js",
+    "runtime-main.js.map": "/ugly-react-homework/static/js/runtime-main.eb23c19a.js.map",
+    "static/js/2.e1fd3b64.chunk.js": "/ugly-react-homework/static/js/2.e1fd3b64.chunk.js",
+    "static/js/2.e1fd3b64.chunk.js.map": "/ugly-react-homework/static/js/2.e1fd3b64.chunk.js.map",
+    "index.html": "/ugly-react-homework/index.html",
+    "static/css/main.1733fb01.chunk.css.map": "/ugly-react-homework/static/css/main.1733fb01.chunk.css.map",
+    "static/js/2.e1fd3b64.chunk.js.LICENSE.txt": "/ugly-react-homework/static/js/2.e1fd3b64.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.eb23c19a.js",
+    "static/js/2.e1fd3b64.chunk.js",
+    "static/css/main.1733fb01.chunk.css",
+    "static/js/main.be7270a8.chunk.js"
+  ]
+}
